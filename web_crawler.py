@@ -40,7 +40,29 @@ def get_all_links(page):
             break
     return links
 
-html = get_page('http://www.google.com')
-
-urls = get_all_links(html)
-print(urls)
+def union(p,q):
+    for e in q:
+        if e not in p:
+            p.append(e)
+            
+def crawl_web (seed_page):
+    tocrawl = get_all_links(get_page(seed_page)) 
+    crawled = []
+    
+    while tocrawl:
+        page_url = tocrawl.pop()
+        if page_url not in crawled:
+            union(tocrawl, get_all_links(get_page(page_url)))
+            crawled.append(page_url)
+        
+    return crawled    
+     
+        
+seed_page = 'http://www.udacity.com/cs101x/index.html'        
+print (crawl_web(seed_page))        
+        
+        
+        
+        
+        
+        
