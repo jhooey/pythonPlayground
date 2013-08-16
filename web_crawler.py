@@ -45,7 +45,7 @@ def union(p,q):
         if e not in p:
             p.append(e)
             
-def crawl_web (seed_page):
+def crawl_web (seed_page, max_pages):
     tocrawl = get_all_links(get_page(seed_page)) 
     crawled = []
     
@@ -54,12 +54,13 @@ def crawl_web (seed_page):
         if page_url not in crawled:
             union(tocrawl, get_all_links(get_page(page_url)))
             crawled.append(page_url)
-        
+        if len(crawled) >= max_pages:
+            break
     return crawled    
      
         
 seed_page = 'http://www.udacity.com/cs101x/index.html'        
-print (crawl_web(seed_page))        
+print (crawl_web(seed_page, 3))        
         
         
         
