@@ -1,3 +1,5 @@
+#whitespace in Python is significant
+
 #This is a single line comment
 """This
 		is
@@ -27,6 +29,10 @@ print (str(month) + "/" + str(day) + "/" + str(year) + " " + str(hour) + ":" + s
 """
 ==	!=	>=	<=	<	>
 and 	or		not
+order of precedence or order of operations for boolean operators. The order is as follows:
+not is evaluated first;
+and is evaluated next;
+or is evaluated last.
 """
 
 ########################################STRINGS####################################
