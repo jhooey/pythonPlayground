@@ -6,7 +6,7 @@
 			a
 			   multiline 
 					comment"""
-					
+
 #####################################Date and Time################################
 from datetime import datetime
 
@@ -19,21 +19,6 @@ hour	= now.hour
 minute	= now.minute
 second	= now.second
 print (str(month) + "/" + str(day) + "/" + str(year) + " " + str(hour) + ":" + str(minute) +":"+ str(second))
-
-######################################Booleans####################################
-""" True
-	False
-	must be capitalized
-	"""
-#Boolean Operators
-"""
-==	!=	>=	<=	<	>
-and 	or		not
-order of precedence or order of operations for boolean operators. The order is as follows:
-not is evaluated first;
-and is evaluated next;
-or is evaluated last.
-"""
 
 ########################################STRINGS####################################
 print ('STRING OUTPUTS')
@@ -78,4 +63,33 @@ string_5 = "place"
 print (string_3 % (string_1, string_2))
 print (string_3 % (string_4, string_5))
 
+######################################Booleans####################################
+""" True
+	False
+	must be capitalized
+	"""
+#Boolean Operators
+"""
+==	!=	>=	<=	<	>
+and 	or		not
+order of precedence or order of operations for boolean operators. The order is as follows:
+not is evaluated first;
+and is evaluated next;
+or is evaluated last.
+"""
 
+###########################################CONDITIONAL STATEMENTS############################################
+"""
+if EXPRESSION:
+    # block line one
+    # block line two
+    # et cetera
+elif EXPRESSION: 
+    # block line one
+    # block line two
+    # et cetera
+else:
+    # block line one
+    # block line two
+    # et cetera
+"""
