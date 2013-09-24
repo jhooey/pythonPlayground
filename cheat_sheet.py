@@ -4,7 +4,21 @@
 			a
 			   multiline 
 					comment"""
-#Booleans
+					
+#####################################Date and Time################################
+from datetime import datetime
+
+now = datetime.now()
+print(now)
+month 	= now.month
+day 	= now.day
+year	= now.year
+hour	= now.hour
+minute	= now.minute
+second	= now.second
+print (str(month) + "/" + str(day) + "/" + str(year) + " " + str(hour) + ":" + str(minute) +":"+ str(second))
+
+######################################Booleans####################################
 """ True
 	False
 	must be capitalized
@@ -15,9 +29,9 @@
 and 	or		not
 """
 
-#Strings
-
-#convert to string =>
+########################################STRINGS####################################
+print ('STRING OUTPUTS')
+#convert to string
 number = 23
 str(number)
 
@@ -41,3 +55,21 @@ substring = "MONTY"[1:-1]#you can also select a substring
 print(substring)
 substring = "MONTY"[1:] #select a substring from index 1 to the end of the string
 print(substring)
+
+#Get the length of a string
+print (len(substring))
+#Convert string to all lowercase
+print (substring.lower())
+#Convert string to all uppercase
+print (substring.upper())
+
+# The % string formatter replaced the %s (the "s" is for "string") in our string with the variables in parentheses.
+string_1 = "Camelot"
+string_2 = "place"
+string_3 = "Let's not go to %s. 'Tis a silly %s."
+string_4 = "Holland"
+string_5 = "place"
+print (string_3 % (string_1, string_2))
+print (string_3 % (string_4, string_5))
+
+
