@@ -6,7 +6,15 @@
 			a
 			   multiline 
 					comment"""
+#####################################ASSIGNMENTS##################################
+#You can assign multiple values in a single line
+number1, number2, string1 = 1, 2 , "string"
 
+#The common problem of switching variable values without using a third variable
+#this works because the values are placed into the right hand side then the assignment is completed 
+a,b = 1,2 
+a, b = b, a
+print(a,b)
 #####################################Date and Time################################
 from datetime import datetime
 
