@@ -1,5 +1,5 @@
 #whitespace in Python is significant
-
+ 
 #This is a single line comment
 """This
 		is
@@ -101,3 +101,10 @@ else:
     # block line two
     # et cetera
 """
+#############################################FUNCTIONS#######################################################
+
+def function_name(parameters):
+    """docstring, which is a triple-quoted, multi-line comment that briefly explains what the function does
+       it is placed immediately after the function definition"""
+
+
