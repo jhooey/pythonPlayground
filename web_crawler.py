@@ -1,8 +1,8 @@
 #takes a url and outputs the webpage's content as a string
-import urllib.request
+import urllib2
 def get_page(url):
     try:
-        f = urllib.request.urlopen(url)
+        f = urllib2.urlopen(url)
         response = f.read()
         response = str(response) #converts the output to a string, it was not working without this line
         f.close()
@@ -60,7 +60,7 @@ def crawl_web (seed_page, max_pages):
      
         
 seed_page = 'http://www.udacity.com/cs101x/index.html'        
-print (crawl_web(seed_page, 3))        
+print crawl_web(seed_page, 3)       
         
         
         

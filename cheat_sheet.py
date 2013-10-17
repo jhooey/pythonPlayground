@@ -14,19 +14,19 @@ number1, number2, string1 = 1, 2 , "string"
 #this works because the values are placed into the right hand side then the assignment is completed 
 a,b = 1,2 
 a, b = b, a
-print(a,b)
+print a,b
 #####################################Date and Time################################
 from datetime import datetime
 
 now = datetime.now()
-print(now)
+print now
 month 	= now.month
 day 	= now.day
 year	= now.year
 hour	= now.hour
 minute	= now.minute
 second	= now.second
-print (str(month) + "/" + str(day) + "/" + str(year) + " " + str(hour) + ":" + str(minute) +":"+ str(second))
+print str(month) + "/" + str(day) + "/" + str(year) + " " + str(hour) + ":" + str(minute) +":"+ str(second)
 
 ########################################STRINGS####################################
 print ('STRING OUTPUTS')
@@ -47,20 +47,20 @@ string = 'I\'m still a string'
   0   1   2   3   4   5
   """
 fifth_letter = "MONTY"[4]
-print(fifth_letter)
+print fifth_letter
 fifth_letter = "MONTY"[-1]#you can also start from the end of the string
-print(fifth_letter)
+print fifth_letter
 substring = "MONTY"[1:-1]#you can also select a substring
-print(substring)
+print substring
 substring = "MONTY"[1:] #select a substring from index 1 to the end of the string
-print(substring)
+print substring
 
 #Get the length of a string
-print (len(substring))
+print len(substring)
 #Convert string to all lowercase
-print (substring.lower())
+print substring.lower()
 #Convert string to all uppercase
-print (substring.upper())
+print substring.upper()
 
 # The % string formatter replaced the %s (the "s" is for "string") in our string with the variables in parentheses.
 string_1 = "Camelot"
@@ -68,8 +68,8 @@ string_2 = "place"
 string_3 = "Let's not go to %s. 'Tis a silly %s."
 string_4 = "Holland"
 string_5 = "place"
-print (string_3 % (string_1, string_2))
-print (string_3 % (string_4, string_5))
+print string_3 % (string_1, string_2)
+print string_3 % (string_4, string_5)
 
 ######################################Booleans####################################
 """ True
@@ -106,5 +106,14 @@ else:
 def function_name(parameters):
     """docstring, which is a triple-quoted, multi-line comment that briefly explains what the function does
        it is placed immediately after the function definition"""
+
+
+
+
+
+#########################################SYNTAX CONVENTIONS##################################################
+#for _ in range(n):
+    #the _ is just a variable like any other, but by convention it means 
+    #that you don't intend to use that value, just read it and ignore it.
 
 
