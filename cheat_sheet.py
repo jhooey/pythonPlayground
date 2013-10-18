@@ -94,16 +94,50 @@ my_slice = my_list[1:3]
 print my_slice
 
 """
+.index(VALUE)
 You can search through a list with the index() function. 
 my_list.index("dog") will return the first index that contains the string "dog"
-"""
 
-
-"""
+.insert(INDEX,VALUE)
 Items can be added to the middle of a list (instead of to the end) with the insert() function. 
 my_list.insert(4,"cat") adds the item "cat" at index 4 of my_list, and moves the item previously at index 4 and 
 all items following it to the next index (that is, they all get bumped towards the end by one).
+
+.sort()
+If your list is a jumbled mess, you may need to sort() it. 
+my_list.sort() will sort the items in my_list in increasing numerical/alphabetical order.
+
+It's worth noting that sort() does not return a new list; 
+instead, your existing my_list is sorted in place (the sorted version replaces the unsorted version).
+
+.remove(VALUE)
+Lists have a method called .remove(VALUE) which will remove the first instance of the value passed to it.
 """
+
+
+######################################DICTIONARIES###########################################################
+"""
+A dictionary is similar to a list, but you access values by looking up a key instead of an index. 
+
+1. A single dictionary can hold many types of values. The inventory dict here has both int and list values.
+
+2. A dictionary's keys MUST be both immutable and hashable. Don't worry if you don't understand what that means. 
+    In general, we only use strings, numbers or tuples as keys, but not lists, dictionaries or sets. 
+    The values can be anything you'd like.
+
+3. When you access a value in a dictionary you have access to that value directly.
+
+A key can be any string or number. Dictionaries are enclosed in curly braces, like so:
+"""
+d = {'key1' : 1, 'key2' : 2, 'key3' : 3}
+
+d['key4'] = 4
+
+#Items can be removed from a dictionary with the del command:
+del d['key2']
+
+#A new value can be associated with a key by assigning a value to the key, like so:
+d['key3'] = 42
 
 
 #############################################FOR LOOP########################################################
