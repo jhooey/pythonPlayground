@@ -108,9 +108,6 @@ def function_name(parameters):
        it is placed immediately after the function definition"""
 
 
-
-
-
 #########################################SYNTAX CONVENTIONS##################################################
 #for _ in range(n):
     #the _ is just a variable like any other, but by convention it means 
