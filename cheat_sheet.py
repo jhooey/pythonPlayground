@@ -71,7 +71,49 @@ string_5 = "place"
 print string_3 % (string_1, string_2)
 print string_3 % (string_4, string_5)
 
-######################################Booleans####################################
+######################################LISTS###############################################################
+zoo_animals = ["pangolin", "cassowary", "sloth", "platypus" ];
+# You can access an individual item on the list by its index
+#List indices begin with 0, not 1! 
+print "The first animal at the zoo is the " + zoo_animals[0]
+print "The second animal at the zoo is the " + zoo_animals[1]
+print "The third animal at the zoo is the " + zoo_animals[2]
+print "The fourth animal at the zoo is the " + zoo_animals[3]
+
+#A list index behaves like any other variable name! It can be used to access as well as assign values.
+zoo_animals[2] = "hyena"
+#In Python, we say lists are mutable: that is, they can be changed.
+zoo_animals.append("bear")
+
+
+"""
+list_name[a:b] will return a portion of list_name starting with the index a and ending before the index b.
+"""
+my_list = [0, 1, 2, 3]
+my_slice = my_list[1:3]
+print my_slice
+
+"""
+You can search through a list with the index() function. 
+my_list.index("dog") will return the first index that contains the string "dog"
+"""
+
+
+"""
+Items can be added to the middle of a list (instead of to the end) with the insert() function. 
+my_list.insert(4,"cat") adds the item "cat" at index 4 of my_list, and moves the item previously at index 4 and 
+all items following it to the next index (that is, they all get bumped towards the end by one).
+"""
+
+
+#############################################FOR LOOP########################################################
+
+my_list = [1,9,3,8,5,7]
+#A variable name follows the for keyword; it will be assigned the value of each list item in turn
+for number in my_list:
+    print 2*number
+    
+######################################Booleans################################################################
 """ True
 	False
 	must be capitalized
@@ -121,6 +163,8 @@ print type(4.2)
 print type('spam')
 print type({'Name':'John Cleese'})
 print type((1,2))
+
+
 #########################################SYNTAX CONVENTIONS##################################################
 #for _ in range(n):
     #the _ is just a variable like any other, but by convention it means 
