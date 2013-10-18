@@ -107,16 +107,41 @@ def function_name(parameters):
     """docstring, which is a triple-quoted, multi-line comment that briefly explains what the function does
        it is placed immediately after the function definition"""
 
+###############DEFAULT FUNCTIONS
+"""here is a short list of functions that do not require an import statement
+this is not a comprehensive list"""
 
+print max(1,2,3) #gets the max value from the inputs
+print min(1,2,3)
+print abs(-10)
+
+#returns the type of the data it receives as an argument.
+print type(42)
+print type(4.2)
+print type('spam')
+print type({'Name':'John Cleese'})
+print type((1,2))
 #########################################SYNTAX CONVENTIONS##################################################
 #for _ in range(n):
     #the _ is just a variable like any other, but by convention it means 
     #that you don't intend to use that value, just read it and ignore it.
 
+
 #########################################IMPORT STATEMENTS##################################################
-import math #this is called a generic input
+import math #this is called a generic import of the math module
 print math.sqrt(25)  #tell Python to get the sqrt function from math
 
 from math import sqrt#this is called a function import
 #now you only have to type sqrt() to get the square root of a number
 print sqrt(25)
+"""
+from module import * 
+#this is a mixture of generic and function imports
+#now you have all the tools from math but don't have to call them like you would with a generic import i.e. math.sqrt()
+#do not use this if possible. If there are ever 2 functions with the same name it can be a nightmare to locate what is doing what and when.
+"""
+
+#the following is a good way to see what functions are within a module
+everything = dir(math) # Sets everything to a list of things from math
+print everything       # Prints 'em all!
+
