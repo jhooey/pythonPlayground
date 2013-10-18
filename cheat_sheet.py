@@ -113,4 +113,10 @@ def function_name(parameters):
     #the _ is just a variable like any other, but by convention it means 
     #that you don't intend to use that value, just read it and ignore it.
 
+#########################################IMPORT STATEMENTS##################################################
+import math #this is called a generic input
+print math.sqrt(25)  #tell Python to get the sqrt function from math
 
+from math import sqrt#this is called a function import
+#now you only have to type sqrt() to get the square root of a number
+print sqrt(25)
