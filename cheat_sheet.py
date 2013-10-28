@@ -15,18 +15,7 @@ number1, number2, string1 = 1, 2 , "string"
 a,b = 1,2 
 a, b = b, a
 print a,b
-#####################################Date and Time################################
-from datetime import datetime
 
-now = datetime.now()
-print now
-month 	= now.month
-day 	= now.day
-year	= now.year
-hour	= now.hour
-minute	= now.minute
-second	= now.second
-print str(month) + "/" + str(day) + "/" + str(year) + " " + str(hour) + ":" + str(minute) +":"+ str(second)
 
 ########################################STRINGS####################################
 print ('STRING OUTPUTS')
@@ -212,6 +201,8 @@ print math.sqrt(25)  #tell Python to get the sqrt function from math
 from math import sqrt#this is called a function import
 #now you only have to type sqrt() to get the square root of a number
 print sqrt(25)
+
+
 """
 from module import * 
 #this is a mixture of generic and function imports
@@ -223,3 +214,113 @@ from module import *
 everything = dir(math) # Sets everything to a list of things from math
 print everything       # Prints 'em all!
 
+
+
+##########################################COMMON LIBRARIES#################################################
+ 
+math.pi #Pi, 3.14...
+math.e  #Euler's number, 2.71...
+ 
+math.degrees(2)  #2 radians = 114.59 degreees
+math.radians(60) #60 degrees = 1.04 radians
+ 
+math.sin(2)    #Sine of 2 radians
+math.cos(0.5)  #Cosine of 0.5 radians
+math.tan(0.23) #Tangent of 0.23 radians
+ 
+math.factorial(5) #1 * 2 * 3 * 4 * 5 = 120
+math.sqrt(49)   #Square root of 49 = 7
+
+
+import random
+#This will output either 1, 2, 3, 4 or 5. Randint accepts exactly two parameters: a lowest and a highest number. As you can see, it includes the highest number but goes from 1 above the lowest number. If you want a random floating point number, you can use the random function:
+print random.randint(0, 5)
+
+#…which outputs a random number between 0 and 1, to a load of decimal places. 
+random.random()
+#If you want a larger number, you can multiply it. For example, a random number between 0 and 100:
+random.random() * 100
+
+#The random module also has a function for choosing a random element from a set such as a list, called choice.
+myList = [1, 8, True, 77, "Lorem", 482, "Ipsum"]
+random.choice(myList)
+
+
+#Date and Time################################
+from datetime import datetime
+from datetime import date
+import time
+
+now = datetime.now()
+print now
+month 	= now.month
+day 	= now.day
+year	= now.year
+hour	= now.hour
+minute	= now.minute
+second	= now.second
+print str(month) + "/" + str(day) + "/" + str(year) + " " + str(hour) + ":" + str(minute) +":"+ str(second)
+
+time.time() #Returns the number of seconds since the Unix Epoch, January 1st 1970
+ 
+date.fromtimestamp(123456789)   #Converts a number of seconds to a date object
+date.fromtimestamp(time.time()) #We can combine the two to get an object representing the current time
+ 
+date.fromordinal(10000) #Returns the date a given number of days since January 1st in the Year 1 - 28th of May 0018 in this case
+
+currentDate = date.fromtimestamp(time.time()) #Create a variable representing the time now
+currentDate.strftime("%d/%m/%y") #Format the date like DD/MM/YY - in this case 09/07/11
+ 
+currentDate.isoformat() #Format as an ISO standard date - in this case 2011-07-09
+
+####OS
+from os import path
+ 
+path.exists("/Users/Giles") #Checks if the directory exists
+
+path.getatime("/Users") #Get the last time the given directory was accessed as a timestamp
+path.getmtime("/Users") #Get the last time the given directory was modified as a timestamp
+
+path.getsize("/Users/Giles/Desktop/boot") #Returns the size of a file in bytes - for this file it was 314400 bytes, or 314kb
+
+"""
+The last function in the os module we’re going to look at is join. It combines two paths into one. 
+You might be thinking: “Why can’t I just concatenate the strings?”, but it’s not as simple as that. On Windows, 
+the path delimiter is a backslash, on Mac and Linux it’s a forward slash. This module alleviates problems like that 
+and makes sure your Pythons scripts work on any system.
+"""
+path.join("C:", "Users") #Returns "C:/Users"
+
+  
+import urllib2
+urllib2.urlopen("http://net.tutsplus.com")
+#This will download the HTML content of the page. This won’t return a string though, 
+#so we need to read the data to get that out:
+urllib2.urlopen("http://net.tutsplus.com").read(100)
+
+
+
+################################PACKAGES#############################################
+"""
+If your module is in a different directory than your script, it’s a bit trickier to import them. 
+You have to create a file that tells Python the folder is a package. 
+For example, if you have a folder, called subdirectory, in the same folder as your script, 
+and then your module within that subdirectory, you would have to create a file called __init__.py 
+in the same folder as the module. This file can be empty. Then, from your script, you’d import it
+"""
+
+####################################CLASS###########################################
+class pet:  
+    number_of_legs = 0  
+    
+    def sleep(self):  
+        print "zzz"  
+
+doug = pet()  
+doug.number_of_legs = 4  
+print "Doug has %s legs." % doug.number_of_legs  
+
+#Methods, essentially, are functions contained within a class.
+"""a method always, always, always has to have an argument, called ‘self’ between the parentheses. 
+When Python calls a method, what it does is passes the current object to that method as the first argument. """
+doug.sleep()
