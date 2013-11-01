@@ -1,8 +1,8 @@
 #takes a url and outputs the webpage's content as a string
-import urllib2
+import urllib
 def get_page(url):
     try:
-        f = urllib2.urlopen(url)
+        f = urllib.request.urlopen(url)
         response = f.read()
         response = str(response) #converts the output to a string, it was not working without this line
         f.close()
