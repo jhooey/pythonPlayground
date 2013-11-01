@@ -14,7 +14,7 @@ number1, number2, string1 = 1, 2 , "string"
 #this works because the values are placed into the right hand side then the assignment is completed 
 a,b = 1,2 
 a, b = b, a
-print a,b
+print (a,b)
 
 
 ########################################STRINGS####################################
@@ -36,20 +36,20 @@ string = 'I\'m still a string'
   0   1   2   3   4   5
   """
 fifth_letter = "MONTY"[4]
-print fifth_letter
+print (fifth_letter)
 fifth_letter = "MONTY"[-1]#you can also start from the end of the string
-print fifth_letter
+print (fifth_letter)
 substring = "MONTY"[1:-1]#you can also select a substring
-print substring
+print (substring)
 substring = "MONTY"[1:] #select a substring from index 1 to the end of the string
-print substring
+print (substring)
 
 #Get the length of a string
-print len(substring)
+print (len(substring))
 #Convert string to all lowercase
-print substring.lower()
+print (substring.lower())
 #Convert string to all uppercase
-print substring.upper()
+print (substring.upper())
 
 # The % string formatter replaced the %s (the "s" is for "string") in our string with the variables in parentheses.
 string_1 = "Camelot"
@@ -57,17 +57,17 @@ string_2 = "place"
 string_3 = "Let's not go to %s. 'Tis a silly %s."
 string_4 = "Holland"
 string_5 = "place"
-print string_3 % (string_1, string_2)
-print string_3 % (string_4, string_5)
+print (string_3 % (string_1, string_2))
+print (string_3 % (string_4, string_5))
 
 ######################################LISTS###############################################################
 zoo_animals = ["pangolin", "cassowary", "sloth", "platypus" ];
 # You can access an individual item on the list by its index
 #List indices begin with 0, not 1! 
-print "The first animal at the zoo is the " + zoo_animals[0]
-print "The second animal at the zoo is the " + zoo_animals[1]
-print "The third animal at the zoo is the " + zoo_animals[2]
-print "The fourth animal at the zoo is the " + zoo_animals[3]
+print ("The first animal at the zoo is the " + zoo_animals[0])
+print ("The second animal at the zoo is the " + zoo_animals[1])
+print ("The third animal at the zoo is the " + zoo_animals[2])
+print ("The fourth animal at the zoo is the " + zoo_animals[3])
 
 #A list index behaves like any other variable name! It can be used to access as well as assign values.
 zoo_animals[2] = "hyena"
@@ -80,7 +80,7 @@ list_name[a:b] will return a portion of list_name starting with the index a and 
 """
 my_list = [0, 1, 2, 3]
 my_slice = my_list[1:3]
-print my_slice
+print (my_slice)
 
 """
 .index(VALUE)
@@ -134,7 +134,7 @@ d['key3'] = 42
 my_list = [1,9,3,8,5,7]
 #A variable name follows the for keyword; it will be assigned the value of each list item in turn
 for number in my_list:
-    print 2*number
+    print (2*number)
     
 ######################################Booleans################################################################
 """ True
@@ -176,16 +176,16 @@ def function_name(parameters):
 """here is a short list of functions that do not require an import statement
 this is not a comprehensive list"""
 
-print max(1,2,3) #gets the max value from the inputs
-print min(1,2,3)
-print abs(-10)
+print (max(1,2,3)) #gets the max value from the inputs
+print (min(1,2,3))
+print (abs(-10))
 
 #returns the type of the data it receives as an argument.
-print type(42)
-print type(4.2)
-print type('spam')
-print type({'Name':'John Cleese'})
-print type((1,2))
+print (type(42))
+print (type(4.2))
+print (type('spam'))
+print (type({'Name':'John Cleese'}))
+print (type((1,2)))
 
 
 #########################################SYNTAX CONVENTIONS##################################################
@@ -196,11 +196,11 @@ print type((1,2))
 
 #########################################IMPORT STATEMENTS##################################################
 import math #this is called a generic import of the math module
-print math.sqrt(25)  #tell Python to get the sqrt function from math
+print (math.sqrt(25))  #tell Python to get the sqrt function from math
 
 from math import sqrt#this is called a function import
 #now you only have to type sqrt() to get the square root of a number
-print sqrt(25)
+print (sqrt(25))
 
 
 """
@@ -212,7 +212,7 @@ from module import *
 
 #the following is a good way to see what functions are within a module
 everything = dir(math) # Sets everything to a list of things from math
-print everything       # Prints 'em all!
+print (everything)       # Prints 'em all!
 
 
 
@@ -234,7 +234,7 @@ math.sqrt(49)   #Square root of 49 = 7
 
 import random
 #This will output either 1, 2, 3, 4 or 5. Randint accepts exactly two parameters: a lowest and a highest number. As you can see, it includes the highest number but goes from 1 above the lowest number. If you want a random floating point number, you can use the random function:
-print random.randint(0, 5)
+print (random.randint(0, 5))
 
 #…which outputs a random number between 0 and 1, to a load of decimal places. 
 random.random()
@@ -252,14 +252,14 @@ from datetime import date
 import time
 
 now = datetime.now()
-print now
+print (now)
 month 	= now.month
 day 	= now.day
 year	= now.year
 hour	= now.hour
 minute	= now.minute
 second	= now.second
-print str(month) + "/" + str(day) + "/" + str(year) + " " + str(hour) + ":" + str(minute) +":"+ str(second)
+print (str(month) + "/" + str(day) + "/" + str(year) + " " + str(hour) + ":" + str(minute) +":"+ str(second))
 
 time.time() #Returns the number of seconds since the Unix Epoch, January 1st 1970
  
@@ -274,8 +274,9 @@ currentDate.strftime("%d/%m/%y") #Format the date like DD/MM/YY - in this case 0
 currentDate.isoformat() #Format as an ISO standard date - in this case 2011-07-09
 
 ####OS
+"""
 from os import path
- 
+
 path.exists("/Users/Giles") #Checks if the directory exists
 
 path.getatime("/Users") #Get the last time the given directory was accessed as a timestamp
@@ -283,20 +284,20 @@ path.getmtime("/Users") #Get the last time the given directory was modified as a
 
 path.getsize("/Users/Giles/Desktop/boot") #Returns the size of a file in bytes - for this file it was 314400 bytes, or 314kb
 
-"""
+
 The last function in the os module we’re going to look at is join. It combines two paths into one. 
 You might be thinking: “Why can’t I just concatenate the strings?”, but it’s not as simple as that. On Windows, 
 the path delimiter is a backslash, on Mac and Linux it’s a forward slash. This module alleviates problems like that 
 and makes sure your Pythons scripts work on any system.
-"""
-path.join("C:", "Users") #Returns "C:/Users"
 
+path.join("C:", "Users") #Returns "C:/Users"
+"""
   
-import urllib2
-urllib2.urlopen("http://net.tutsplus.com")
+import urllib
+urllib.request.urlopen("http://net.tutsplus.com")
 #This will download the HTML content of the page. This won’t return a string though, 
 #so we need to read the data to get that out:
-urllib2.urlopen("http://net.tutsplus.com").read(100)
+print(urllib.request.urlopen("http://net.tutsplus.com").read(100))
 
 
 
@@ -314,11 +315,11 @@ class pet:
     number_of_legs = 0  
     
     def sleep(self):  
-        print "zzz"  
+        print ("zzz")  
 
 doug = pet()  
 doug.number_of_legs = 4  
-print "Doug has %s legs." % doug.number_of_legs  
+print ("Doug has %s legs." % doug.number_of_legs)  
 
 #Methods, essentially, are functions contained within a class.
 """a method always, always, always has to have an argument, called ‘self’ between the parentheses. 
