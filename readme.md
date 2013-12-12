@@ -233,67 +233,91 @@ Ex:
 ```
 
 ##raise##
+The raise keyword has 2 purposes.
+
+1. It's used for raising your own errors.
+```
+if something:
+    raise error('My error!')
+```
+2. It's used to re-raise the current exception in an exception handler, so that it can be handled further up the call stack.
+
+```
+try:
+  generate_exception()
+except SomeException, e:
+  if not can_handle(e):
+    raise
+  handle_exception(e)
+```
 
 ##continue##
 the continue keyword is used to interrupt the current cycle, without jumping out of the whole loop. New cycle will begin
 
-
 ##is##
+is tests for identity, not equality. That means Python simply compares the memory address a object resides in. is basically answers the question "Do I have two names for the same object?"
 
 ##return##
+The return key is closely connected with a function definition. The keyword exits the function and returns a value.
 
 ##def##
+The def keyword is used to create a new user defined function. Functions are objects in which we organize our code.
 
 ##for##
+The for keyword is used to iterate over items of a collection in order that they appear in the container.
 
 ##lambda##
+What lambda does is that it defines an anonymous function object on the spot. 
 
-
-
-
-#String Escape Sequences#
-
-* \\ - 
-* \' - '
-* \" - "
-* \a
-* \b
-* \f
-* \n
-* \r
-* \t
-* \v
 
 #Operators#
 
-* +
-* -
-* *
-* **
-* /
-* //
-*   %
-    <
-    >
-    <=
-    >=
-    ==
-    !=
-    <>
-    ( )
-    [ ]
-    { }
-    @
-    ,
-    :
-    .
-    =
-    ;
-    +=
-    -=
-    *=
-    /=
-    //=
-    %=
-    **=
+## Arithmetic Operators ##
+* +		- Addition - Adds values on either side of the operator
+* - 	- Subtraction - Subtracts right hand operand from left hand operand
+* \*	- Multiplication - Multiplies values on either side of the operator
+* \*\*	- Exponent - Performs exponential (power) calculation on operators
+* /		- Division - Divides left hand operand by right hand operand
+* //	- Floor Division - The division of operands where the result is the quotient in which the digits after the decimal point are removed.
+* %		- Division - Divides left hand operand by right hand operand
+
+## Comparison Operators ##
+* <		- Checks if the value of left operand is less than the value of right operand, if yes then condition becomes true.
+* >		- Checks if the value of left operand is greater than the value of right operand, if yes then condition becomes true.
+* <=	- Checks if the value of left operand is less than or equal to the value of right operand, if yes then condition becomes true.
+* >=	- Checks if the value of left operand is greater than or equal to the value of right operand, if yes then condition becomes true.
+* ==	- Checks if the value of two operands are equal or not, if yes then condition becomes true.
+* !=	- Checks if the value of two operands are equal or not, if values are not equal then condition becomes true.
+* <>	- Checks if the value of two operands are equal or not, if values are not equal then condition becomes true.  (REMOVED IN PYTHON 3)
+
+## Assignment Operators ##
+* =		- Simple assignment operator, Assigns values from right side operands to left side operand
+* +=	- Add AND assignment operator, It adds right operand to the left operand and assign the result to left operand
+* -=	- Subtract AND assignment operator, It subtracts right operand from the left operand and assign the result to left operand
+* \*=	- Multiply AND assignment operator, It multiplies right operand with the left operand and assign the result to left operand
+* /=	- Divide AND assignment operator, It divides left operand with the right operand and assign the result to left operand
+* //=	- Floor Dividion and assigns a value, Performs floor division on operators and assign value to the left operand
+* %=	- Modulus AND assignment operator, It takes modulus using two operands and assign the result to left operand
+* \*\*=	- Exponent AND assignment operator, Performs exponential (power) calculation on operators and assign value to the left operand
+
+## Other Symbols ##
+* @		- signifies a python decorator - good explination here: http://simeonfranklin.com/blog/2012/jul/1/python-decorators-in-12-steps/
+* ;		- Python does not require semi-colons to terminate statements. Semi colons can be used to delimit statements if you wish to put multiple statements on the same line.
+
+
+#Data Types#
+##Tuples##
+A tuple is another sequence data type that is similar to the list. A tuple consists of a number of values separated by commas. Unlike lists, however, tuples are enclosed within parentheses.
+
+The main differences between lists and tuples are: Lists are enclosed in brackets ( [ ] ) and their elements and size can be changed, while tuples are enclosed in parentheses ( ( ) ) and cannot be updated. Tuples can be thought of as read-only lists. For example:
+
+##Lists##
+Lists are the most versatile of Python's compound data types. A list contains items separated by commas and enclosed within square brackets ([]). To some extent, lists are similar to arrays in C. One difference between them is that all the items belonging to a list can be of different data type.
+
+The values stored in a list can be accessed using the slice operator ( [ ] and [ : ] ) with indexes starting at 0 in the beginning of the list and working their way to end -1. The plus ( + ) sign is the list concatenation operator, and the asterisk ( * ) is the repetition operator. For example:
+
+##Python Dictionary##
+Python's dictionaries are kind of hash table type. They work like associative arrays or hashes found in Perl and consist of key-value pairs. A dictionary key can be almost any Python type, but are usually numbers or strings. Values, on the other hand, can be any arbitrary Python object.
+
+Dictionaries are enclosed by curly braces ( { } ) and values can be assigned and accessed using square braces ( [] ). For example:
 
