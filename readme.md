@@ -199,14 +199,18 @@ The class keyword is the most important keyword in object oriented programming. 
 The exec statement is used to execute Python statements which are stored in a string or file. For example, we can generate a string containing Python code at runtime and then execute these statements using the exec statement. 
 
 Ex:
+```
 >>> exec 'print "Hello World"'
 Hello World
+```
 
 ###eval###
 The eval statement is used to evaluate valid Python expressions which are stored in a string
 Ex:
+```
 >>> eval('2*3')
 6
+```
 
 ##in##
 The in key word can be used as a boolean expression 
@@ -249,26 +253,26 @@ the continue keyword is used to interrupt the current cycle, without jumping out
 
 #String Escape Sequences#
 
-*\\ - 
-*\' - '
-*\" - "
-*\a
-*\b
-*\f
-*\n
-*\r
-*\t
-*\v
+* \\ - 
+* \' - '
+* \" - "
+* \a
+* \b
+* \f
+* \n
+* \r
+* \t
+* \v
 
 #Operators#
 
-    +
-    -
-    *
-    **
-    /
-    //
-    %
+* +
+* -
+* *
+* **
+* /
+* //
+*   %
     <
     >
     <=
